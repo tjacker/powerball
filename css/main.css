@@ -1,0 +1,299 @@
+/* ======================
+    Base Element Styles
+   ====================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #222;
+  font: 1rem/26px Helvetica, "Helvetica Neue", Arial;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  margin: 0 0 20px;
+}
+
+a {
+  color: red;
+}
+
+thead {
+  border-bottom: 2px solid red;
+}
+
+td {
+  padding: 2px 8px;
+  text-align: left;
+  font-size: 0.9rem
+}
+
+img[src$=".gif"] {
+  width: 17px;
+  height: auto;
+}
+
+
+/* ======================
+    Base Layout Styles
+   ====================== */
+
+/* ----- Navigation ----- */
+
+
+
+/* -- Layout Containers -- */
+
+.header-container {
+  border-bottom: 20px solid #2e2e2e;
+}
+
+.footer-container {
+  border-top: 20px solid #2e2e2e;
+}
+
+.header-container,
+.footer-container {
+  background: #5c5c5c;
+  text-align: center;
+}
+
+.main-container {
+  background-color: #eb1522;
+  padding: 75px 0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* ---- Page Elements ---- */
+
+.header {
+  padding: 10px 0;
+}
+
+.title {
+  display: none;
+}
+
+.main,
+.odds {
+  padding: 20px 0;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 20px 0 #222;
+  border-radius: 4px;
+}
+
+.odds-table {
+  display: table;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer {
+  color: #f5f5f5;
+  padding: 20px 0;
+}
+
+.balls {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ball {
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 0.65rem;
+}
+
+.white-ball {
+  background: radial-gradient(circle at 25% 25%, white, #454545);
+}
+
+.red-ball {
+  background: radial-gradient(circle at 25% 25%, red, #5c0000);
+}
+
+
+#btn {
+  color: #f5f5f5;
+  background-color: #171717;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 14px;
+  letter-spacing: 0.05rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0 #222;
+  transition: background-color 0.5s;
+}
+
+#btn:hover {
+  background-color: #454545;
+}
+
+#btn:active {
+  background-color: #171717;
+}
+
+
+.top-rule {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-rule {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.odds-table-body tr:nth-child(even) {
+  background-color: #e7e7e7;
+}
+
+
+/* ======================
+    Media Queries
+   ====================== */
+
+@media only screen and (min-width: 768px) {
+  
+  .header,
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .title {
+    display: block;
+    color: #f5f5f5;
+    text-shadow: 0 0 20px #222;
+  }
+  
+  .ball {
+    font-size: 1.75rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 0.75rem;
+  }
+  
+  td {
+    padding: 6px 24px 6px 12px;
+    text-align: left;
+    font-size: 1.1rem
+  }
+  
+  img[src$=".gif"] {
+    width: 21px;
+    height: auto;
+  }
+  
+  .footer {
+    text-align: left;
+    padding: 30px 0;
+  }
+}
+
+@media only screen and (min-width: 1028px) {
+
+  /* 1028px - 10% for margins */
+  .wrapper {
+    width: 924px;
+    margin: 0 auto;
+  }
+}
+
+/* ======================
+    Clearfix Classes
+   ====================== */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ======================
+    Print Styles
+   ====================== */
+
+@media print {
+    .main-container,
+    .main-container:before,
+    .main-container:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    #btn {
+      display: none;
+    }
+  
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

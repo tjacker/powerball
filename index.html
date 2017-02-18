@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Powerball quick pick simulator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body>
+
+    <div class="header-container">
+      <header class="header wrapper">
+        <img id="logo" src="img/powerballlogo.png" alt="Powerball logo">
+        <h1 class="title">Quick Pick Generator</h1>
+      </header>
+    </div> <!-- #header-container -->
+    
+      <div class="main-container">
+        <div class="main wrapper clearfix">
+          <ul class="balls">
+            <li class="ball white-ball"></li>
+            <li class="ball white-ball"></li>
+            <li class="ball white-ball"></li>
+            <li class="ball white-ball"></li>
+            <li class="ball white-ball"></li>
+            <li class="ball red-ball"></li>
+          </ul>
+        </div> <!-- #main -->
+        <button id="btn" type="button">Generate Numbers</button>
+        <div class="odds wrapper clearfix">
+          <h2>Odds of Winning</h2>
+          <hr class="top-rule">
+          <table class="odds-table">
+            <thead>
+              <tr>
+                <th scope="col">Match</th>
+                <th scope="col">Prize</th>
+                <th scope="col">Odds</th>
+              </tr>
+            </thead>
+            <tbody class="odds-table-body">
+              <tr>
+                <td>
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/redball.gif" alt="Red ball">
+                </td>
+                <td>Grand Prize</td>
+                <td>1 in 292,201,338</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                </td>
+                <td>$1,000,000</td>
+                <td>1 in 11,688,054</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/redball.gif" alt="Red ball">
+                </td>
+                <td>$50,000</td>
+                <td>1 in 913,129</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                </td>
+                <td>$100</td>
+                <td>1 in 36,525</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/redball.gif" alt="Red ball">
+                </td>
+                <td>$100</td>
+                <td>1 in 14,494</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                </td>
+                <td>$7</td>
+                <td>1 in 580</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/redball.gif" alt="Red ball">
+                </td>
+                <td>$7</td>
+                <td>1 in 701</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="img/whiteball.gif" alt="White ball">
+                  <img src="img/redball.gif" alt="Red ball">
+                </td>
+                <td>$4</td>
+                <td>1 in 92</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="img/redball.gif" alt="Red ball">
+                </td>
+                <td>$4</td>
+                <td>1 in 38</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr class="bottom-rule">
+          <p><strong>The overall odds of winning are 1 in 24.87.</strong><br><em>The odds presented here are based on a $2 play rounded to the nearest whole number.</em></p>
+        </div> <!-- #odds -->
+      </div> <!-- #main-container -->
+    
+      <div class="footer-container">
+        <footer class="footer wrapper">
+          <p>Image Source: <a href="//en.wikipedia.org/wiki/File:Powerballlogo.png" title="Fair use of copyrighted material in the context of Powerball">Fair Use</a>, <a href="https://en.wikipedia.org/w/index.php?curid=13749572">Link</a></p>
+          <p id="copyright">&copy; Multi-State Lottery Association</p>
+        </footer>
+      </div> <!-- #footer-container -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="js/main.js"></script>
+  </body>
+</html>
